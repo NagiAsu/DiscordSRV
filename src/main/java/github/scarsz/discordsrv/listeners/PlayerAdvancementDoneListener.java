@@ -73,7 +73,7 @@ public class PlayerAdvancementDoneListener implements Listener {
         } catch (NullPointerException e) {
             return;
         } catch (Exception e) {
-            DiscordSRV.error(e);
+            // DiscordSRV.error(e);
             return;
         }
 
