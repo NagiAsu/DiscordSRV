@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.discordsrv</groupId>
     <artifactId>discordsrv</artifactId>
@@ -47,9 +49,11 @@
           -Dbuild.number=${BUILD_NUMBER} -Dbuild.origin=${BUILD_URL} -Dgit.revision=${GIT_COMMIT} -->
         <build.number>UNKNOWN</build.number>
         <!-- Local git values provided by git-commit-id-plugin -->
-        <!--suppress UnresolvedMavenProperty -->
+        <!--suppress
+        UnresolvedMavenProperty -->
         <build.origin>${git.build.user.name}</build.origin>
-        <!--suppress UnresolvedMavenProperty -->
+        <!--suppress
+        UnresolvedMavenProperty -->
         <git.revision>${git.commit.id}</git.revision>
         <project.build.timestamp>${maven.build.timestamp}</project.build.timestamp>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss z</maven.build.timestamp.format>
@@ -57,7 +61,8 @@
     </properties>
 
     <build>
-        <!--suppress UnresolvedMavenProperty -->
+        <!--suppress
+        UnresolvedMavenProperty -->
         <finalName>${project.name}-Build-${project.version}-${git.commit.id.abbrev}</finalName>
         <defaultGoal>clean package</defaultGoal>
         <resources>
@@ -96,7 +101,8 @@
                                 </relocation>
                                 <relocation>
                                     <pattern>com.iwebpp.crypto</pattern>
-                                    <shadedPattern>github.scarsz.discordsrv.dependencies.iwebpp.crypto</shadedPattern>
+                                    <shadedPattern>
+                                        github.scarsz.discordsrv.dependencies.iwebpp.crypto</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.vdurmont.emoji</pattern>
@@ -112,7 +118,8 @@
                                 </relocation>
                                 <relocation>
                                     <pattern>dev.vankka.mcdiscordreserializer</pattern>
-                                    <shadedPattern>github.scarsz.discordsrv.dependencies.mcdiscordreserializer</shadedPattern>
+                                    <shadedPattern>
+                                        github.scarsz.discordsrv.dependencies.mcdiscordreserializer</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>dev.vankka.simpleast</pattern>
@@ -158,11 +165,13 @@
                                 </relocation>
                                 <relocation>
                                     <pattern>com.google.common</pattern>
-                                    <shadedPattern>github.scarsz.discordsrv.dependencies.google.common</shadedPattern>
+                                    <shadedPattern>
+                                        github.scarsz.discordsrv.dependencies.google.common</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.google.errorprone</pattern>
-                                    <shadedPattern>github.scarsz.discordsrv.dependencies.google.errorprone</shadedPattern>
+                                    <shadedPattern>
+                                        github.scarsz.discordsrv.dependencies.google.errorprone</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.google.gson</pattern>
@@ -170,11 +179,13 @@
                                 </relocation>
                                 <relocation>
                                     <pattern>com.google.j2objc</pattern>
-                                    <shadedPattern>github.scarsz.discordsrv.dependencies.google.j2objc</shadedPattern>
+                                    <shadedPattern>
+                                        github.scarsz.discordsrv.dependencies.google.j2objc</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.github.kevinsawicki</pattern>
-                                    <shadedPattern>github.scarsz.discordsrv.dependencies.kevinsawicki</shadedPattern>
+                                    <shadedPattern>
+                                        github.scarsz.discordsrv.dependencies.kevinsawicki</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.github.zafarkhaja</pattern>
@@ -383,8 +394,8 @@
             <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
             <!-- system scope stuff below is for convenience when needing to dig through NMS in IDE -->
-<!--            <scope>system</scope>-->
-<!--            <systemPath>${project.basedir}/craftbukkit.jar</systemPath>-->
+            <!--            <scope>system</scope>-->
+            <!--            <systemPath>${project.basedir}/craftbukkit.jar</systemPath>-->
             <exclusions>
                 <exclusion> <!-- We only use lang3 -->
                     <groupId>commons-lang</groupId>
@@ -532,12 +543,13 @@
             <groupId>net.kyori</groupId>
             <artifactId>adventure-platform-bukkit</artifactId>
             <!-- if it breaks blame the lack of releases -->
-            <version>4.0.0-SNAPSHOT</version>
+            <version>4.3.0</version>
         </dependency>
         <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-text-minimessage</artifactId>
-            <!-- Releases aren't a thing, right? This is a (specific) snapshot build on nexus.scarsz.me -->
+            <!-- Releases aren't a thing, right? This is a (specific) snapshot build on
+            nexus.scarsz.me -->
             <version>4.1.0-20210316.192746</version>
         </dependency>
 
